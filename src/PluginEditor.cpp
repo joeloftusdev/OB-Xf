@@ -3257,12 +3257,6 @@ void ObxfAudioProcessorEditor::enterMidiLearnMode()
 
             overlay->setScaleFactor(impliedScaleFactor());
 
-            if (it->second == juce::String(ID::NoiseColor))
-            {
-                overlay->setCustomOverlayWidth(46);
-                overlay->setCustomOverlayHeight(26);
-            }
-
             overlay->onSelectionCallback = [this](MidiLearnOverlay *selected) {
                 for (const auto &other : midiLearnOverlays)
                     other->setSelected(false);
